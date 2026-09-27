@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-olive: #8B9A6E;
+  --color-brand-offwhite: #F7F2EB;
+  --color-brand-beige: #EAE2D6;
+  --color-brand-grey: #EEEEEE;
+
+  --font-display: "Syne", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  --spacing-container: 2rem;
+}
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Syne:wght@600;700;800&display=swap");
+
+  html {
+    background-color: var(--color-brand-offwhite);
+    color: #1a1a1a;
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-olive);
+    color: var(--color-brand-offwhite);
+  }
+
+  /* Accessibility: Focus states */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-olive);
+    outline-offset: 4px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-padding {
+    padding-top: clamp(5rem, 10vw, 10rem);
+    padding-bottom: clamp(5rem, 10vw, 10rem);
+  }
+
+  .container-wide {
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+  }
+
+  .reveal-text {
+    overflow: hidden;
+    display: inline-block;
+  }
+}

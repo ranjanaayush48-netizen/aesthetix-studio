@@ -1,0 +1,6 @@
+{
+  "name": "Aesthetix Studio",
+  "description": "A premium, production-grade freelance web development studio foundation with Supabase integration and 3D-ready architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
